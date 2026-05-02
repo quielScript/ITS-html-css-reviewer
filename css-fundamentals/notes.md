@@ -15,21 +15,21 @@ Applied directly inside HTML elements.
 
 ### How it works:
 
-- CSS is written inside the `style` attribute
-- Applies **only to that element**
+* CSS is written inside the `style` attribute
+* Applies **only to that element**
 
 ### When to use:
 
-- Quick testing
-- JavaScript dynamic styling
+* Quick testing
+* JavaScript dynamic styling
 
 ### Why it’s bad in real projects:
 
-- Hard to maintain
-- Repeated code everywhere
+* Hard to maintain
+* Repeated code everywhere
 
 Note:
-Avoid this unless you _really_ need it.
+Avoid this unless you *really* need it.
 
 ---
 
@@ -39,57 +39,57 @@ CSS written inside `<style>` in the `<head>`.
 
 ```html id="internal1"
 <head>
-	<style>
-		p {
-			color: blue;
-		}
-	</style>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
 </head>
 ```
 
 ### How it works:
 
-- Affects the whole page
-- Good for small projects
+* Affects the whole page
+* Good for small projects
 
 ### When to use:
 
-- Single-page apps (simple ones)
-- Prototyping
+* Single-page apps (simple ones)
+* Prototyping
 
 ---
 
-## 3. External Stylesheets
+## 3. External Stylesheets (BEST PRACTICE)
 
 ```html id="external1"
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
 ```
 
 **styles.css:**
 
 ```css id="external2"
 p {
-	color: green;
+  color: green;
 }
 ```
 
 ### How it works:
 
-- CSS is in a separate file
-- Can be reused across pages
+* CSS is in a separate file
+* Can be reused across pages
 
 ### Why this is the best:
 
-- Clean code
-- Scalable
-- Industry standard
+* Clean code
+* Scalable
+* Industry standard
 
 Note:
 You should **default to this 95% of the time**.
 
 ---
 
-# CSS Precedence
+# CSS Precedence (Who Wins?)
 
 When multiple styles target the same element:
 
@@ -106,15 +106,15 @@ When multiple styles target the same element:
 
 ```html id="precedence1"
 <head>
-	<style>
-		p {
-			color: blue;
-		}
-	</style>
+  <style>
+    p {
+      color: blue;
+    }
+  </style>
 </head>
 
 <body>
-	<p style="color: red;">Hello</p>
+  <p style="color: red;">Hello</p>
 </body>
 ```
 
@@ -122,7 +122,7 @@ Result: **RED**
 
 Because:
 
-- Inline > Internal
+* Inline > Internal
 
 ---
 
@@ -136,22 +136,22 @@ Example:
 <h1>Title</h1>
 ```
 
-👉 Browser adds:
+Browser adds:
 
-- big font
-- bold
+* big font
+* bold
 
 That’s why CSS resets exist (like `normalize.css`)
 
 ---
 
-# 2.2 CSS Rule Sets
+# 2.2 CSS Rule Sets (Core Syntax)
 
 Every CSS you write follows this structure:
 
 ```css id="ruleset1"
 selector {
-	property: value;
+  property: value;
 }
 ```
 
@@ -161,20 +161,20 @@ selector {
 
 ```css id="ruleset2"
 p {
-	color: blue;
-	font-size: 16px;
+  color: blue;
+  font-size: 16px;
 }
 ```
 
 ### Breakdown:
 
-- `p` → selector
-- `color` → property
-- `blue` → value
+* `p` → selector
+* `color` → property
+* `blue` → value
 
 ---
 
-# Selectors
+# Selectors (VERY IMPORTANT)
 
 Selectors decide **what gets styled**.
 
@@ -184,7 +184,7 @@ Selectors decide **what gets styled**.
 
 ```css id="selector1"
 p {
-	color: red;
+  color: red;
 }
 ```
 
@@ -200,7 +200,7 @@ Targets all `<p>` tags
 
 ```css id="selector2css"
 .text {
-	color: blue;
+  color: blue;
 }
 ```
 
@@ -216,7 +216,7 @@ Reusable → most common in real projects
 
 ```css id="selector3css"
 #title {
-	color: green;
+  color: green;
 }
 ```
 
@@ -224,22 +224,22 @@ Should be unique
 
 Note:
 
-- Avoid overusing IDs for styling
-- Use classes instead (more flexible)
+* Avoid overusing IDs for styling
+* Use classes instead (more flexible)
 
 ---
 
-## Descendant Selector (Space)
+## 4. Descendant Selector (Space)
 
 ```css id="selector4"
 div p {
-	color: purple;
+  color: purple;
 }
 ```
 
 Targets:
 
-- `<p>` inside `<div>`
+* `<p>` inside `<div>`
 
 ---
 
@@ -249,7 +249,7 @@ Used for states.
 
 ```css id="selector5"
 a:hover {
-	color: orange;
+  color: orange;
 }
 ```
 
@@ -261,17 +261,17 @@ When user hovers → color changes
 
 ```html id="combined1"
 <div class="container">
-	<p class="text">Hello Quiel</p>
+  <p class="text">Hello Quiel</p>
 </div>
 ```
 
 ```css id="combined2"
 .container p {
-	color: blue;
+  color: blue;
 }
 
 .text:hover {
-	color: red;
+  color: red;
 }
 ```
 
@@ -283,6 +283,10 @@ When user hovers → color changes
 ---
 
 # Common Beginner Mistakes
+
+Watch out for these:
+
+---
 
 ## Missing semicolon
 
@@ -300,8 +304,7 @@ Breaks CSS parsing
 ## Wrong selector
 
 ```css id="mistake2"
-#text {
-} /* but HTML uses class="text" */
+#text { }  /* but HTML uses class="text" */
 ```
 
 ---

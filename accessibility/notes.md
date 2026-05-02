@@ -9,22 +9,16 @@ This is about **discipline and standards**.
 ### Bad:
 
 ```css id="bad1"
-p {
-	color: blue;
-}
-h1 {
-	color: blue;
-}
-span {
-	color: blue;
-}
+p { color: blue; }
+h1 { color: blue; }
+span { color: blue; }
 ```
 
 ### Good:
 
 ```css id="good1"
 .text-blue {
-	color: blue;
+  color: blue;
 }
 ```
 
@@ -45,7 +39,7 @@ If you repeat styles → you’re doing it wrong
 ```css id="comment1"
 /* Main layout container */
 .container {
-	display: flex;
+  display: flex;
 }
 ```
 
@@ -56,8 +50,8 @@ If you repeat styles → you’re doing it wrong
 
 Helps:
 
-- teammates
-- future you
+* teammates
+* future you
 
 ---
 
@@ -65,7 +59,7 @@ Helps:
 
 ```css id="fontsafe1"
 body {
-	font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 ```
 
@@ -77,16 +71,16 @@ Always include fallback fonts
 
 Your site should work on:
 
-- Chrome
-- Firefox
-- Edge
-- Mobile browsers
+* Chrome
+* Firefox
+* Edge
+* Mobile browsers
 
 Example issue:
 
 ```css id="cross1"
 input {
-	appearance: none;
+  appearance: none;
 }
 ```
 
@@ -110,7 +104,7 @@ Some browsers behave differently → test always
 
 ```css id="sepgood2"
 .text-red {
-	color: red;
+  color: red;
 }
 ```
 
@@ -130,7 +124,7 @@ This is about making your app usable for **everyone**.
 ## Text Alternatives (alt)
 
 ```html id="a11y1"
-<img src="logo.png" alt="Company logo" />
+<img src="logo.png" alt="Company logo">
 ```
 
 Screen readers rely on this
@@ -143,8 +137,8 @@ Screen readers rely on this
 
 ```css id="contrast1"
 p {
-	color: lightgray;
-	background: white;
+  color: lightgray;
+  background: white;
 }
 ```
 
@@ -156,8 +150,8 @@ Hard to read
 
 ```css id="contrast2"
 p {
-	color: #222;
-	background: white;
+  color: #222;
+  background: white;
 }
 ```
 
@@ -172,22 +166,23 @@ Text must be clearly readable
 
 ```css id="typo1"
 p {
-	font-size: 16px;
-	line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.6;
 }
 ```
 
 Avoid:
 
-- tiny fonts
-- cramped lines
+* tiny fonts
+* cramped lines
 
 ---
 
 ## Tab Order (Keyboard Navigation)
 
 ```html id="tab1"
-<input type="text" /> <button>Submit</button>
+<input type="text">
+<button>Submit</button>
 ```
 
 Users should navigate using **Tab key**
@@ -200,8 +195,8 @@ Your layout should not break when zoomed.
 
 Test:
 
-- Zoom browser to 200%
-- Check layout
+* Zoom browser to 200%
+* Check layout
 
 ---
 
@@ -212,19 +207,18 @@ Test:
 <h2>Section</h2>
 <p>Content</p>
 ```
+ Helps:
 
-Helps:
-
-- screen readers
-- SEO
-- readability
+* screen readers
+* SEO
+* readability
 
 ---
 
 ## Language / Translation
 
 ```html id="lang1"
-<html lang="en"></html>
+<html lang="en">
 ```
 
 Helps screen readers + translation tools
@@ -245,7 +239,7 @@ This is where you **find and fix problems**.
 ## Syntax Errors
 
 ```html id="syntaxbad"
-<p>Hello</p>
+<p>Hello
 ```
 
 Missing closing tag → can break layout
@@ -255,7 +249,9 @@ Missing closing tag → can break layout
 ## Tag Mismatch
 
 ```html id="tagbad"
-<div><p>Text</div></p>
+<div>
+  <p>Text</div>
+</p>
 ```
 
 Incorrect nesting
@@ -266,11 +262,11 @@ Incorrect nesting
 
 ```css id="cascade1"
 p {
-	color: blue;
+  color: blue;
 }
 
 .text {
-	color: red;
+  color: red;
 }
 ```
 
@@ -284,9 +280,10 @@ Result: **RED**
 
 ### Why?
 
-- CSS follows:
-  - specificity
-  - order
+* CSS follows:
+
+  * specificity
+  * order
 
 ---
 
@@ -296,9 +293,9 @@ Result: **RED**
 
 ### 1. Use Browser DevTools
 
-- Inspect element
-- Check styles
-- See overridden CSS
+* Inspect element
+* Check styles
+* See overridden CSS
 
 ---
 
@@ -306,7 +303,7 @@ Result: **RED**
 
 ```css id="debug1"
 * {
-	outline: 1px solid red;
+  outline: 1px solid red;
 }
 ```
 
@@ -324,18 +321,21 @@ Remove code step-by-step until bug disappears
 
 Use tools like:
 
-- W3C Validator
+* W3C Validator
 
 ---
 
-# ⚠️ Common Mistakes
+# Common Mistakes
 
-## ❌ No alt text
+These are VERY common:
 
-## ❌ Poor contrast
+- No alt text
 
-## ❌ Inline styles everywhere
+- Poor contrast
 
-## ❌ Broken nesting
+- Inline styles everywhere
 
-## ❌ Ignoring mobile + zoom
+- Broken nesting
+
+- Ignoring mobile + zoom
+

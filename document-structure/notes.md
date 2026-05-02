@@ -14,8 +14,8 @@ This is about **layout + meaning using basic tags**.
 
 ### Key idea:
 
-- `h1` = most important
-- `h6` = least important
+* `h1` = most important
+* `h6` = least important
 
 Note:
 Use **only ONE `<h1>` per page** for SEO + structure.
@@ -26,13 +26,13 @@ Use **only ONE `<h1>` per page** for SEO + structure.
 
 ```html
 <p>This is a paragraph.</p>
-<br />
-<hr />
+<br>
+<hr>
 ```
 
-- `<p>` → text block
-- `<br>` → line break (no closing tag)
-- `<hr>` → horizontal divider
+* `<p>` → text block
+* `<br>` → line break (no closing tag)
+* `<hr>` → horizontal divider
 
 ---
 
@@ -52,8 +52,8 @@ Use **only ONE `<h1>` per page** for SEO + structure.
 
 Note:
 
-- Use `div` for layout
-- Use `span` for small text styling
+* Use `div` for layout
+* Use `span` for small text styling
 
 ---
 
@@ -63,8 +63,8 @@ Note:
 
 ```html
 <ul>
-	<li>Apple</li>
-	<li>Banana</li>
+  <li>Apple</li>
+  <li>Banana</li>
 </ul>
 ```
 
@@ -72,34 +72,34 @@ Note:
 
 ```html
 <ol>
-	<li>Step 1</li>
-	<li>Step 2</li>
+  <li>Step 1</li>
+  <li>Step 2</li>
 </ol>
 ```
 
 ---
 
-## Tables
+## Tables (Structured Data)
 
 ```html
 <table border="1">
-	<tr>
-		<th>Name</th>
-		<th>Age</th>
-	</tr>
-	<tr>
-		<td>Quiel</td>
-		<td>20</td>
-	</tr>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Quiel</td>
+    <td>20</td>
+  </tr>
 </table>
 ```
 
 ### Breakdown:
 
-- `<table>` → container
-- `<tr>` → row
-- `<th>` → header cell
-- `<td>` → data cell
+* `<table>` → container
+* `<tr>` → row
+* `<th>` → header cell
+* `<td>` → data cell
 
 Note:
 Tables are ONLY for data, not layout (old-school mistake)
@@ -116,27 +116,27 @@ Now we move from **generic (`div`) → meaningful structure**.
 
 ```html
 <header>
-	<h1>My Website</h1>
+  <h1>My Website</h1>
 </header>
 
 <nav>
-	<a href="#">Home</a>
-	<a href="#">About</a>
+  <a href="#">Home</a>
+  <a href="#">About</a>
 </nav>
 
 <section>
-	<article>
-		<h2>Blog Title</h2>
-		<p>Content here...</p>
-	</article>
+  <article>
+    <h2>Blog Title</h2>
+    <p>Content here...</p>
+  </article>
 </section>
 
 <aside>
-	<p>Sidebar content</p>
+  <p>Sidebar content</p>
 </aside>
 
 <footer>
-	<p>© 2026</p>
+  <p>© 2026</p>
 </footer>
 ```
 
@@ -144,12 +144,12 @@ Now we move from **generic (`div`) → meaningful structure**.
 
 ## Key Tags Explained
 
-- `<header>` → top section
-- `<nav>` → navigation links
-- `<section>` → grouping content
-- `<article>` → independent content (blog, post)
-- `<aside>` → sidebar
-- `<footer>` → bottom section
+* `<header>` → top section
+* `<nav>` → navigation links
+* `<section>` → grouping content
+* `<article>` → independent content (blog, post)
+* `<aside>` → sidebar
+* `<footer>` → bottom section
 
 ---
 
@@ -157,15 +157,15 @@ Now we move from **generic (`div`) → meaningful structure**.
 
 ```html
 <figure>
-	<img src="image.jpg" />
-	<figcaption>Profile picture</figcaption>
+  <img src="image.jpg">
+  <figcaption>Profile picture</figcaption>
 </figure>
 ```
 
 ```html
 <details>
-	<summary>Click me</summary>
-	<p>Hidden content</p>
+  <summary>Click me</summary>
+  <p>Hidden content</p>
 </details>
 ```
 
@@ -194,8 +194,8 @@ This is how users move through your app.
 <a href="https://google.com" target="_blank">Open Google</a>
 ```
 
-- `_blank` → new tab
-- `_self` → same tab (default)
+* `_blank` → new tab
+* `_self` → same tab (default)
 
 ---
 
@@ -222,7 +222,8 @@ Works like scrolling navigation
 ### Relative
 
 ```html
-<a href="about.html">About</a> <a href="../index.html">Back</a>
+<a href="about.html">About</a>
+<a href="../index.html">Back</a>
 ```
 
 ### Folder Example:
@@ -242,13 +243,13 @@ From `about.html` → go to index:
 
 ---
 
-## Image Map
+## Image Map (Clickable Areas)
 
 ```html
-<img src="map.jpg" usemap="#map" />
+<img src="map.jpg" usemap="#map">
 
 <map name="map">
-	<area shape="rect" coords="0,0,100,100" href="page.html" />
+  <area shape="rect" coords="0,0,100,100" href="page.html">
 </map>
 ```
 
@@ -267,8 +268,8 @@ This is HUGE in real apps (login, signup, checkout).
 
 ```html
 <form action="/submit" method="POST">
-	<input type="text" name="username" />
-	<button type="submit">Submit</button>
+  <input type="text" name="username">
+  <button type="submit">Submit</button>
 </form>
 ```
 
@@ -276,8 +277,8 @@ This is HUGE in real apps (login, signup, checkout).
 
 ## Form Attributes
 
-- `action` → where data is sent
-- `method` → how data is sent
+* `action` → where data is sent
+* `method` → how data is sent
 
 ### Methods:
 
@@ -291,11 +292,11 @@ This is HUGE in real apps (login, signup, checkout).
 ## Input Types
 
 ```html
-<input type="text" />
-<input type="email" />
-<input type="password" />
-<input type="number" />
-<input type="date" />
+<input type="text">
+<input type="email">
+<input type="password">
+<input type="number">
+<input type="date">
 ```
 
 ---
@@ -303,8 +304,8 @@ This is HUGE in real apps (login, signup, checkout).
 ## Input Restrictions
 
 ```html
-<input type="text" required minlength="3" maxlength="10" />
-<input type="number" min="1" max="100" />
+<input type="text" required minlength="3" maxlength="10">
+<input type="number" min="1" max="100">
 ```
 
 ---
@@ -315,8 +316,8 @@ This is HUGE in real apps (login, signup, checkout).
 
 ```html
 <select>
-	<option value="1">Option 1</option>
-	<option value="2">Option 2</option>
+  <option value="1">Option 1</option>
+  <option value="2">Option 2</option>
 </select>
 ```
 
@@ -333,35 +334,38 @@ This is HUGE in real apps (login, signup, checkout).
 ### Label (IMPORTANT)
 
 ```html
-<label for="username">Username:</label> <input id="username" type="text" />
+<label for="username">Username:</label>
+<input id="username" type="text">
 ```
 
 ### Why label matters:
 
-- Accessibility
-- Clicking label focuses input
+* Accessibility
+* Clicking label focuses input
 
 ---
 
-## Full Example
+## Full Example (Realistic Form)
 
 ```html
 <form action="/register" method="POST">
-	<label for="name">Name:</label>
-	<input id="name" type="text" required />
 
-	<label for="email">Email:</label>
-	<input id="email" type="email" required />
+  <label for="name">Name:</label>
+  <input id="name" type="text" required>
 
-	<label for="role">Role:</label>
-	<select id="role">
-		<option>User</option>
-		<option>Admin</option>
-	</select>
+  <label for="email">Email:</label>
+  <input id="email" type="email" required>
 
-	<textarea placeholder="Your message"></textarea>
+  <label for="role">Role:</label>
+  <select id="role">
+    <option>User</option>
+    <option>Admin</option>
+  </select>
 
-	<button type="submit">Register</button>
+  <textarea placeholder="Your message"></textarea>
+
+  <button type="submit">Register</button>
+
 </form>
 ```
 
@@ -369,8 +373,9 @@ This is HUGE in real apps (login, signup, checkout).
 
 # Common Mistakes (Watch these, Quiel)
 
-- Using `<div>` everywhere instead of semantic tags
-- Using tables for layout
-- Forgetting `label` in forms
-- Wrong relative paths (`../` mistakes)
-- Not using `name` attribute (important for backend)
+* Using `<div>` everywhere instead of semantic tags
+* Using tables for layout
+* Forgetting `label` in forms
+* Wrong relative paths (`../` mistakes)
+* Not using `name` attribute (important for backend)
+

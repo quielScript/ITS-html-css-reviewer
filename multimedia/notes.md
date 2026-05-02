@@ -7,7 +7,7 @@ Images are simple on the surface, but **a lot is happening under the hood**.
 ## 1. `<img>` — The Basics
 
 ```html id="img1"
-<img src="profile.jpg" alt="Profile picture" />
+<img src="profile.jpg" alt="Profile picture">
 ```
 
 ---
@@ -15,43 +15,43 @@ Images are simple on the surface, but **a lot is happening under the hood**.
 ## Core Attributes
 
 ```html id="img2"
-<img
-	src="profile.jpg"
-	alt="Profile picture of Quiel"
-	width="200"
-	height="200"
-/>
+<img 
+  src="profile.jpg" 
+  alt="Profile picture of Quiel" 
+  width="200" 
+  height="200"
+>
 ```
 
 ### What each does:
 
-- `src` → image path
-- `alt` → **VERY IMPORTANT**
-  - used for accessibility
-  - shown if image fails to load
+* `src` → image path
+* `alt` → **VERY IMPORTANT**
 
-- `width` / `height` → controls size
+  * used for accessibility
+  * shown if image fails to load
+* `width` / `height` → controls size
 
 ---
 
 ## Why `alt` Matters
 
 ```html id="img3"
-<img src="logo.png" alt="Company logo" />
+<img src="logo.png" alt="Company logo">
 ```
 
 Without `alt`:
 
-- Screen readers fail
-- SEO is worse
-- Accessibility score drops
+* Screen readers fail
+* SEO is worse
+* Accessibility score drops
 
 Note:
 Treat `alt` as required, not optional
 
 ---
 
-## How the Browser Loads Images
+## How the Browser Loads Images (Important)
 
 1. Parses HTML
 2. Finds `<img>`
@@ -68,9 +68,9 @@ Used when you want **different images for different screens**
 
 ```html id="pic1"
 <picture>
-	<source media="(max-width: 600px)" srcset="small.jpg" />
-	<source media="(max-width: 1200px)" srcset="medium.jpg" />
-	<img src="large.jpg" alt="Responsive image" />
+  <source media="(max-width: 600px)" srcset="small.jpg">
+  <source media="(max-width: 1200px)" srcset="medium.jpg">
+  <img src="large.jpg" alt="Responsive image">
 </picture>
 ```
 
@@ -78,18 +78,18 @@ Used when you want **different images for different screens**
 
 ## How it works:
 
-- Browser checks conditions
-- Picks the best image
-- Falls back to `<img>` if needed
+* Browser checks conditions
+* Picks the best image
+* Falls back to `<img>` if needed
 
 ---
 
 Note:
 Use `<picture>` for:
 
-- performance optimization
-- responsive design
-- modern apps
+* performance optimization
+* responsive design
+* modern apps
 
 ---
 
@@ -111,16 +111,16 @@ Now we move to **media playback**.
 
 ```html id="video2"
 <video width="400" controls autoplay muted loop>
-	<source src="video.mp4" type="video/mp4" />
+  <source src="video.mp4" type="video/mp4">
 </video>
 ```
 
 ### What these do:
 
-- `controls` → play/pause UI
-- `autoplay` → starts automatically
-- `muted` → required for autoplay in browsers
-- `loop` → repeats video
+* `controls` → play/pause UI
+* `autoplay` → starts automatically
+* `muted` → required for autoplay in browsers
+* `loop` → repeats video
 
 ---
 
@@ -128,8 +128,8 @@ Now we move to **media playback**.
 
 ```html id="video3"
 <video controls>
-	<source src="video.mp4" type="video/mp4" />
-	<source src="video.webm" type="video/webm" />
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.webm" type="video/webm">
 </video>
 ```
 
@@ -141,7 +141,7 @@ Browser chooses supported format
 
 ```html id="audio1"
 <audio controls>
-	<source src="audio.mp3" type="audio/mpeg" />
+  <source src="audio.mp3" type="audio/mpeg">
 </audio>
 ```
 
@@ -149,8 +149,8 @@ Browser chooses supported format
 
 ### Same idea as video:
 
-- supports multiple formats
-- uses `controls`
+* supports multiple formats
+* uses `controls`
 
 ---
 
@@ -158,8 +158,8 @@ Browser chooses supported format
 
 ```html id="track1"
 <video controls>
-	<source src="video.mp4" type="video/mp4" />
-	<track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" />
+  <source src="video.mp4" type="video/mp4">
+  <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
 </video>
 ```
 
@@ -167,9 +167,9 @@ Browser chooses supported format
 
 ### Why this matters:
 
-- Accessibility (hearing impaired)
-- Better UX
-- Professional apps REQUIRE this
+* Accessibility (hearing impaired)
+* Better UX
+* Professional apps REQUIRE this
 
 ---
 
@@ -178,12 +178,11 @@ Browser chooses supported format
 Used to embed content from other websites (like YouTube)
 
 ```html id="iframe1"
-<iframe
-	width="560"
-	height="315"
-	src="https://www.youtube.com/embed/VIDEO_ID"
-	allowfullscreen
->
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/VIDEO_ID"
+  allowfullscreen>
 </iframe>
 ```
 
@@ -191,11 +190,12 @@ Used to embed content from other websites (like YouTube)
 
 ## How it works:
 
-- Loads another webpage inside your page
-- Common for:
-  - YouTube videos
-  - Google Maps
-  - external widgets
+* Loads another webpage inside your page
+* Common for:
+
+  * YouTube videos
+  * Google Maps
+  * external widgets
 
 ---
 
@@ -210,22 +210,25 @@ Don’t host large videos yourself unless needed (performance cost)
 ```html id="combinedMedia1"
 <h2>My Portfolio</h2>
 
-<img src="profile.jpg" alt="Profile picture of Quiel" width="150" />
+<img src="profile.jpg" alt="Profile picture of Quiel" width="150">
 
 <picture>
-	<source media="(max-width: 600px)" srcset="mobile.jpg" />
-	<img src="desktop.jpg" alt="Banner image" />
+  <source media="(max-width: 600px)" srcset="mobile.jpg">
+  <img src="desktop.jpg" alt="Banner image">
 </picture>
 
 <video controls width="400">
-	<source src="intro.mp4" type="video/mp4" />
+  <source src="intro.mp4" type="video/mp4">
 </video>
 
 <audio controls>
-	<source src="music.mp3" type="audio/mpeg" />
+  <source src="music.mp3" type="audio/mpeg">
 </audio>
 
-<iframe width="400" height="250" src="https://www.youtube.com/embed/VIDEO_ID">
+<iframe 
+  width="400" 
+  height="250"
+  src="https://www.youtube.com/embed/VIDEO_ID">
 </iframe>
 ```
 
@@ -233,33 +236,32 @@ Don’t host large videos yourself unless needed (performance cost)
 
 # Common Beginner Mistakes
 
-Quiel, avoid these:
+Avoid these:
 
 ---
 
 ## Missing alt
 
 ```html
-<img src="image.jpg" />
+<img src="image.jpg">
 ```
 
 ---
 
 ## Using huge images (performance killer)
 
-👉 Always optimize images
+Always optimize images
 
 ---
 
 ## Autoplay without muted
 
 ```html
-<video autoplay></video>
-<!-- may not work -->
+<video autoplay></video> <!-- may not work -->
 ```
 
 ---
 
 ## Not using multiple formats
 
-👉 Some browsers won’t play certain formats
+Some browsers won’t play certain formats

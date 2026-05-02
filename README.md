@@ -78,7 +78,7 @@ write, debug, and maintain well-formed HTML and CSS code.
 
 ---
 
-### 5. [Webpage Styling using CSS](/multimedia/notes.md)
+### 5. [Webpage Styling using CSS](/styling/notes.md)
 
 #### 5.1 Construct and analyze styles that position content
 

@@ -4,7 +4,7 @@ This is how you control **where elements live on the page**.
 
 ---
 
-## The Box Model
+## The Box Model (FOUNDATION)
 
 Every element is a box:
 
@@ -15,19 +15,19 @@ content → padding → border → margin
 
 ```css id="box1"
 div {
-	width: 200px;
-	padding: 20px;
-	border: 5px solid black;
-	margin: 10px;
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;
 }
 ```
 
 ### How it works:
 
-- `content` → actual text/image
-- `padding` → space inside
-- `border` → outline
-- `margin` → space outside
+* `content` → actual text/image
+* `padding` → space inside
+* `border` → outline
+* `margin` → space outside
 
 Note:
 If your layout looks “off”, **90% of the time it’s box model issues.**
@@ -37,12 +37,8 @@ If your layout looks “off”, **90% of the time it’s box model issues.**
 ## Display (Block vs Inline)
 
 ```css id="display1"
-div {
-	display: block;
-}
-span {
-	display: inline;
-}
+div { display: block; }
+span { display: inline; }
 ```
 
 ### Key difference:
@@ -62,7 +58,7 @@ span {
 
 ```css id="pos1"
 div {
-	position: static;
+  position: static;
 }
 ```
 
@@ -74,9 +70,9 @@ Normal flow (no control)
 
 ```css id="pos2"
 div {
-	position: relative;
-	top: 10px;
-	left: 20px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
 ```
 
@@ -88,9 +84,9 @@ Moves **relative to itself**
 
 ```css id="pos3"
 div {
-	position: absolute;
-	top: 0;
-	right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 ```
 
@@ -105,8 +101,8 @@ Parent must have `position: relative`
 
 ```css id="pos4"
 div {
-	position: fixed;
-	top: 0;
+  position: fixed;
+  top: 0;
 }
 ```
 
@@ -118,11 +114,11 @@ Stays fixed on screen (like navbars)
 
 ```css id="float1"
 img {
-	float: left;
+  float: left;
 }
 ```
 
-👉 Text wraps around element
+Text wraps around element
 
 Note:
 Avoid float for layout → use Flexbox/Grid instead
@@ -133,14 +129,14 @@ Avoid float for layout → use Flexbox/Grid instead
 
 ```css id="size1"
 div {
-	width: 300px;
-	height: 200px;
-	max-width: 100%;
-	overflow: hidden;
+  width: 300px;
+  height: 200px;
+  max-width: 100%;
+  overflow: hidden;
 }
 ```
 
-- `overflow: hidden | scroll | auto`
+* `overflow: hidden | scroll | auto`
 
 ---
 
@@ -148,12 +144,12 @@ div {
 
 ```css id="vis1"
 div {
-	visibility: hidden;
+  visibility: hidden;
 }
 ```
 
-- `hidden` → invisible but takes space
-- `display: none` → removed completely
+* `hidden` → invisible but takes space
+* `display: none` → removed completely
 
 ---
 
@@ -167,10 +163,10 @@ This is about **readability and design polish**.
 
 ```css id="font1"
 p {
-	font-family: Arial, sans-serif;
-	font-size: 16px;
-	font-weight: bold;
-	font-style: italic;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
 }
 ```
 
@@ -180,9 +176,9 @@ p {
 
 ```css id="text1"
 p {
-	color: #333;
-	text-align: center;
-	text-decoration: underline;
+  color: #333;
+  text-align: center;
+  text-decoration: underline;
 }
 ```
 
@@ -192,11 +188,11 @@ p {
 
 ```css id="link1"
 a {
-	color: blue;
+  color: blue;
 }
 
 a:hover {
-	color: red;
+  color: red;
 }
 ```
 
@@ -206,9 +202,9 @@ a:hover {
 
 ```css id="text2"
 p {
-	line-height: 1.6;
-	letter-spacing: 2px;
-	text-indent: 20px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  text-indent: 20px;
 }
 ```
 
@@ -218,7 +214,7 @@ p {
 
 ```css id="wrap1"
 p {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 ```
 
@@ -239,7 +235,7 @@ Good typography = **professional UI instantly**
 
 ```css id="border1"
 div {
-	border: 2px solid black;
+  border: 2px solid black;
 }
 ```
 
@@ -257,7 +253,7 @@ border-color: black;
 
 ```css id="bg1"
 div {
-	background-color: lightblue;
+  background-color: lightblue;
 }
 ```
 
@@ -267,10 +263,10 @@ div {
 
 ```css id="bg2"
 div {
-	background-image: url("bg.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+  background-image: url("bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 ```
 
@@ -328,9 +324,9 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ```css id="media1"
 @media (max-width: 768px) {
-	body {
-		background-color: lightgray;
-	}
+  body {
+    background-color: lightgray;
+  }
 }
 ```
 
@@ -338,8 +334,8 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ### How it works:
 
-- Applies CSS when condition is true
-- Used for breakpoints
+* Applies CSS when condition is true
+* Used for breakpoints
 
 ---
 
@@ -347,16 +343,13 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ```css id="media2"
 /* Mobile */
-@media (max-width: 600px) {
-}
+@media (max-width: 600px) { }
 
 /* Tablet */
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) { }
 
 /* Desktop */
-@media (min-width: 1024px) {
-}
+@media (min-width: 1024px) { }
 ```
 
 ---
@@ -365,18 +358,18 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ```css id="layout1"
 .container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .box {
-	width: 50%;
+  width: 50%;
 }
 
 @media (max-width: 600px) {
-	.box {
-		width: 100%;
-	}
+  .box {
+    width: 100%;
+  }
 }
 ```
 
@@ -384,8 +377,8 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ### What happens:
 
-- Desktop → 2 columns
-- Mobile → 1 column
+* Desktop → 2 columns
+* Mobile → 1 column
 
 ---
 
@@ -393,8 +386,8 @@ Use `%`, `vw`, `vh` for responsive layouts
 
 ```css id="grid1"
 .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 ```
 
@@ -405,7 +398,7 @@ Learn Flexbox + Grid → you’ll rarely struggle with layout again
 
 # Common Mistakes
 
-Quiel, watch these carefully:
+Watch these carefully:
 
 ---
 
@@ -430,3 +423,4 @@ Causes overflow bugs
 ## Not testing on mobile
 
 Huge beginner mistake
+
