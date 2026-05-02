@@ -120,3 +120,9 @@ write, debug, and maintain well-formed HTML and CSS code.
 #### 6.3 Evaluate the structural integrity of HTML and CSS markup
 
 - Syntax errors, tag mismatch, cascading issues
+
+---
+
+## Learn More
+
+- [HTML Guide](https://github.com/quielScript/HTML-Guide)
